@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.itis.springboot.models.Event;
+import ru.itis.springboot.models.User;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,9 +21,11 @@ public class EventDto {
     private String address;
     private String description;
     private String rubric;
+    private List<User> users;
 
     public static EventDto from(Event event) {
         return EventDto.builder()
+                .users(event.getGuests())
                 .id(event.getId())
                 .title(event.getTitle())
                 .date(event.getDate())

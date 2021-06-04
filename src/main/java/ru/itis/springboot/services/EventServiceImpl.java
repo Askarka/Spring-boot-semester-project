@@ -6,6 +6,7 @@ import ru.itis.springboot.dto.EventCreationForm;
 import ru.itis.springboot.dto.EventDeletionForm;
 import ru.itis.springboot.dto.EventDto;
 import ru.itis.springboot.models.Event;
+import ru.itis.springboot.models.User;
 import ru.itis.springboot.repositories.EventRepository;
 import ru.itis.springboot.repositories.RubricRepository;
 
@@ -43,5 +44,10 @@ public class EventServiceImpl implements EventService {
     @Override
     public void deleteEvent(EventDeletionForm form) {
         eventRepository.removeByTitle(form.getName());
+    }
+
+    @Override
+    public List<User> getAllGuests() {
+        return null;
     }
 }

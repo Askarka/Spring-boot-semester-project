@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/singUp").permitAll()
                 .antMatchers("/profile").authenticated()
-                .antMatchers("/deleteEvent").hasAuthority("ADMIN")
+                .antMatchers("/deleteEvent").permitAll()
 //                .antMatchers("/deleteEvent")
                 .and()
                 .formLogin()

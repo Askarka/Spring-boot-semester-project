@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.itis.springboot.dto.EventCreationForm;
 import ru.itis.springboot.dto.EventDeletionForm;
+import ru.itis.springboot.models.User;
+import ru.itis.springboot.repositories.UsersRepository;
 import ru.itis.springboot.services.EventService;
 import ru.itis.springboot.services.RubricService;
 
